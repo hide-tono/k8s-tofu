@@ -1,0 +1,16 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# 機密データ
+*.tfvars
+*.tfvars.json
+
+# ローカル .terraform ディレクトリ
+**/.terraform/*

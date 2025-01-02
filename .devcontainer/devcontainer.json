@@ -1,0 +1,30 @@
+{
+    "name": "OpenTofu Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/robbert229/devcontainer-features/opentofu:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"enableNonRootDocker": "true",
+			"moby": "true"
+		},
+		// For kubectl
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+			"version": "latest",
+			"helm": "latest",
+			"minikube": "latest"
+		},
+		"ghcr.io/mpriscella/features/kind:1": {
+			"version": "latest"
+		}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "hashicorp.terraform"
+            ]
+        }
+    },
+    "remoteEnv": {
+        "WORKSPACE_DIR": "/workspaces/k8s-tofu"
+    }
+}
